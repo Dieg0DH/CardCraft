@@ -73,10 +73,12 @@ CardCraft uses Jasmine for unit testing to ensure core functionality works as ex
 ```text
 CardCraft/
 ├── 📁 Assets/
+│   ├── 📷 1.jpg
+│   ├── 📷 3.png
 │   ├── 📷 balls.png
+│   ├── 📷 css.png
 │   ├── 📷 gohan1.jpg
 │   ├── 📷 html.png
-│   ├── 📷 css.png
 │   └── 📷 js.png
 │
 ├── 📁 scripts/
@@ -86,8 +88,10 @@ CardCraft/
 │   ├── 📁 support/
 │   │   ├── jasmine-browser.mjs
 │   │   └── jasmine.json
-│   └── tests/
-│       └── prueba.spec.js
+│   └── 📁 tests/
+│       ├── prueba.spec.js
+│       └── 📁 spec/
+│           └── 📁 support/
 │
 ├── 📁 styles/
 │   ├── 📄 reset.css
