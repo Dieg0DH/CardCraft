@@ -18,7 +18,6 @@
 - Create and customize your DBZ dream team
 - Add team members with custom details and images
 - Interactive team member cards with hover effects
-- Responsive design that works on all devices
 </details>
 
 <details>
