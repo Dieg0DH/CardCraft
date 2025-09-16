@@ -8,7 +8,7 @@
 
 ## 📸 Preview
 
-![Screenshot of the application](Assets/gohan1.jpg)
+![Screenshot of the application](Assets/1.jpg)
 
 ## ✨ Features
 
