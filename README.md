@@ -30,15 +30,6 @@
 - Real-time updates to your team composition
 </details>
 
-<details>
-  <summary><strong>📱 Responsive Design</strong></summary>
-
-- Fully responsive layout that adapts to any screen size
-- Mobile-friendly interface for on-the-go team building
-- Optimized for both desktop and mobile browsers
-- Touch-friendly controls for mobile users
-</details>
-
 ## 🚀 Getting Started
 
 1. **Clone the repository**
