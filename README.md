@@ -119,15 +119,6 @@ CardCraft/
    - Use the "Share" button to share your team (future feature)
    - The "Publish" button will be available in future updates (Future feature)
 
-## 🎨 Design Philosophy
-
-CardCraft is built with a focus on:
-
-- **Simplicity**: Clean, intuitive interface
-- **Performance**: Fast loading with minimal dependencies
-- **Responsiveness**: Works on all devices
-- **User Experience**: Smooth interactions and feedback
-
 ---
 
 <div align="center">
