@@ -118,10 +118,6 @@ CardCraft/
    - Click on a card to remove the team member
    - The team updates in real-time
 
-3. **Share Your Team**
-   - Use the "Share" button to share your team (future feature)
-   - The "Publish" button will be available in future updates (Future feature)
-
 ---
 
 <div align="center">
