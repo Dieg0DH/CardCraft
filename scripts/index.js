@@ -32,27 +32,45 @@ const repository = new Repository();
 
 function createCard({ id, title, description, imgUrl }) {
   const cardBox = document.createElement("div");
+  const contentWrapper = document.createElement("div");
+  const imageContainer = document.createElement("div");
   const titleElement = document.createElement("h3");
   const descriptionElement = document.createElement("p");
   const imgElement = document.createElement("img");
 
-  titleElement.innerHTML = title;
-  descriptionElement.innerHTML = description;
+  // Power level badge
+  const powerLevelBadge = document.createElement("div");
+  powerLevelBadge.classList.add("power-level");
+  powerLevelBadge.textContent = "20000";
+
+  titleElement.textContent = title;
+  descriptionElement.textContent = description;
   imgElement.src = imgUrl;
+  imgElement.alt = title;
 
   cardBox.classList.add("activity-card");
+  contentWrapper.classList.add("card-content");
+  imageContainer.classList.add("image-container");
   titleElement.classList.add("activity-title");
   descriptionElement.classList.add("activity-description");
   imgElement.classList.add("activity-image");
+
+  imgElement.onerror = function () {
+    console.error(`Failed to load image: ${imgUrl}`);
+  };
+
+  imageContainer.appendChild(imgElement);
+  contentWrapper.appendChild(titleElement);
+  contentWrapper.appendChild(descriptionElement);
+
+  cardBox.appendChild(powerLevelBadge);
+  cardBox.appendChild(imageContainer);
+  cardBox.appendChild(contentWrapper);
 
   cardBox.addEventListener("click", () => {
     repository.deleteActivity(id);
     renderActivities();
   });
-
-  cardBox.appendChild(titleElement);
-  cardBox.appendChild(descriptionElement);
-  cardBox.appendChild(imgElement);
 
   return cardBox;
 }
@@ -60,10 +78,8 @@ function createCard({ id, title, description, imgUrl }) {
 function renderActivities() {
   const activitiesContainer = document.querySelector("#activities");
   activitiesContainer.innerHTML = "";
-
   const activities = repository.getActivities();
   const activityElements = activities.map((activity) => createCard(activity));
-
   activityElements.forEach((activityElement) =>
     activitiesContainer.appendChild(activityElement)
   );
@@ -71,7 +87,6 @@ function renderActivities() {
 
 function handler(event) {
   event.preventDefault();
-
   const title = document.querySelector('input[type="text"]').value;
   const description = document.querySelector("textarea").value;
   const imgUrl = document.querySelector(
@@ -84,11 +99,9 @@ function handler(event) {
   }
 
   repository.createActivity(title, description, imgUrl);
-
   document.querySelector('input[type="text"]').value = "";
   document.querySelector("textarea").value = "";
   document.querySelector('input[type="text"]:nth-of-type(2)').value = "";
-
   renderActivities();
 }
 
